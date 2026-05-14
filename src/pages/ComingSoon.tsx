@@ -114,7 +114,7 @@ const ComingSoon = () => {
   };
 
   const inputClass =
-    'w-full bg-transparent border-b border-[#D0D0D0] py-3 text-sm text-black placeholder-[#AAAAAA] ' +
+    'w-full bg-transparent border-b border-[#555555] py-3 text-sm text-black placeholder-[#555555] ' +
     'outline-none focus:border-black transition-colors duration-200';
 
   return (
@@ -147,32 +147,23 @@ const ComingSoon = () => {
           Aurora Visual<sup style={{ fontSize: '0.5em', verticalAlign: 'super' }}>®</sup>
         </span>
 
-        <div className="flex items-center gap-5">
-          {/* Language toggle */}
-          <div className="flex items-center gap-1 text-xs tracking-widest uppercase">
-            <button
-              onClick={() => { setLang('es'); setStatus('idle'); }}
-              className="transition-colors"
-              style={{ color: lang === 'es' ? '#000000' : '#AAAAAA' }}
-            >
-              ES
-            </button>
-            <span style={{ color: '#D0D0D0' }}>|</span>
-            <button
-              onClick={() => { setLang('en'); setStatus('idle'); }}
-              className="transition-colors"
-              style={{ color: lang === 'en' ? '#000000' : '#AAAAAA' }}
-            >
-              EN
-            </button>
-          </div>
-
-          <a
-            href="mailto:info@auroravisual.media"
-            className="text-sm rounded-full px-6 py-2.5 bg-black text-white transition-transform hover:scale-[1.03]"
+        {/* Language toggle */}
+        <div className="flex items-center gap-1 text-xs tracking-widest uppercase">
+          <button
+            onClick={() => { setLang('es'); setStatus('idle'); }}
+            className="transition-colors"
+            style={{ color: lang === 'es' ? '#000000' : '#AAAAAA' }}
           >
-            {t.nav}
-          </a>
+            ES
+          </button>
+          <span style={{ color: '#D0D0D0' }}>|</span>
+          <button
+            onClick={() => { setLang('en'); setStatus('idle'); }}
+            className="transition-colors"
+            style={{ color: lang === 'en' ? '#000000' : '#AAAAAA' }}
+          >
+            EN
+          </button>
         </div>
       </nav>
 
